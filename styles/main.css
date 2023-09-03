@@ -186,17 +186,7 @@ li{
         border-left: none;
         padding-left: 0;
     }
-@chart-width:650px;
-@chart-height:300px;
-
-@grid-color:#aaa;
-@bar-color:#F16335;
-@bar-thickness:50px;
-@bar-rounded: 3px;
-@bar-spacing:30px;
-
-
-
+}
 .chart-wrap{
   margin-left:50px;
   font-family:sans-serif;
