@@ -36,15 +36,20 @@
       // Define the chart to be drawn.
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Year');
-      data.addColumn('number', 'Percentage');
+      data.addColumn('number', '');
       data.addRows([
-        ['2012:TOP10 revenue ', 25],
-        ['2014:Top sales/ margin', 25],
-        ['2019: Best Performance',25],
-        ['2020:Best Performance',25]
+        ['2012:TOP revenue ', 0.25],
+        ['2014:Top sales',0.25],
+        ['2019:Best Performance',0.25],
+        ['2020:Best Performance',0.25]
 
       ]);
 
+        // Set chart options
+      var options = {'title':'Accomplishments',
+                     'width':400,
+                     'height':300}
+        
       // Instantiate and draw the chart.
       var chart = new google.visualization.BarChart(document.getElementById('myChart'));
       chart.draw(data, null);
@@ -53,11 +58,11 @@
 
 <body>
   <!-- Identify where the chart should be drawn. -->
-  <div id="myChart"/>
+  <div id="myChart" style="width:400; height:300 font-size:10 "/>
 </body>
 
 
-
+style="font-size:10vw"
                    
                </section>
         
