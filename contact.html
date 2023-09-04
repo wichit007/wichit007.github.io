@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <video autoplay muted loop id="myVideo">
+      <source src="bg.mp4" type="video/mp4" />
+    </video>
+
+    <form
+      class="container"
+      action="your email"
+      method="POST"
+    >
+      <h2>Contact Us</h2>
+      <div class="input-box">
+        <input type="text" name="Username" required />
+        <label for="">Username</label>
+      </div>
+
+      <div class="input-box">
+        <input type="email" name="Email" required />
+        <label for="">Email</label>
+      </div>
+
+      <div class="input-box">
+        <textarea name="Message" required></textarea>
+        <label for="">Message</label>
+      </div>
+
+      <button class="btn">Send</button>
+    </form>
+  </body>
+</html>
