@@ -27,8 +27,34 @@
                 </section>
                   
                <section>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script>
+    google.charts.load('current', {packages: ['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
 
- 
+    function drawChart() {
+      // Define the chart to be drawn.
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Year');
+      data.addColumn('number', 'Percentage');
+      data.addRows([
+        ['2012:TOP10 revenue ', 25],
+        ['2014:Top sales/ margin', 25],
+        ['2019: Best Performance',25],
+        ['2020:Best Performance',25]
+
+      ]);
+
+      // Instantiate and draw the chart.
+      var chart = new google.visualization.BarChart(document.getElementById('myChart'));
+      chart.draw(data, null);
+    }
+  </script>
+
+<body>
+  <!-- Identify where the chart should be drawn. -->
+  <div id="myChart"/>
+</body>
 
 
 
