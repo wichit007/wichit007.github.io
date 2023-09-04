@@ -20,30 +20,63 @@
                 <h2>Accomplishments</h2>
 
                 <section class="card--project">
-                   
                     <p> Successful of company’s revenue driving of main US customer up to TOP10 in 2012  </p>
                     <p> Successful of driving Hardline Home’s (Cooking) sales and margin after Major Range Change in May, 2014 </p>
                     <P> Seller achievement of Shopee awards in 2019 (Best deal by promotion performance of 2018, Home&Living category)</P>
                     <P> Seller achievement of Shopee awards in 2020 (Best deal by promotion performance of 2019, Home&Living category)</P>
-  <h1>Bar Chart HTML</h1>
-
-<div class="chart-wrap vertical">
-  <h2 class="title">Bar Chart HTML Example:  Using Only HTML And CSS</h2>
-  
-  <div class="grid">
-      <div class="bar" style="--bar-value:85%;" data-name="Your Blog" title="Your Blog 85%"></div>
-      <div class="bar" style="--bar-value:23%;" data-name="Medium" title="Medium 23%"></div>
-     <div class="bar" style="--bar-value:7%;" data-name="Tumblr" title="Tumblr 7%"></div>
-      <div class="bar" style="--bar-value:38%;" data-name="Facebook" title="Facebook 38%"></div>
-      <div class="bar" style="--bar-value:35%;" data-name="YouTube" title="YouTube 35%"></div>
-      <div class="bar" style="--bar-value:30%;" data-name="LinkedIn" title="LinkedIn 30%"></div>
-      <div class="bar" style="--bar-value:5%;" data-name="Twitter" title="Twitter 5%"></div>
-      <div class="bar" style="--bar-value:20%;" data-name="Other" title="Other 20%"></div>    
-  </div>
-</div>
                 </section>
                   
+               <section>
 
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Topping');
+        data.addColumn('number', 'Slices');
+        data.addRows([
+          ['Mushrooms', 3],
+          ['Onions', 1],
+          ['Olives', 1],
+          ['Zucchini', 1],
+          ['Pepperoni', 2]
+        ]);
+
+        // Set chart options
+        var options = {'title':'How Much Pizza I Ate Last Night',
+                       'width':400,
+                       'height':300};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+
+
+
+                   
+               </section>
         
             </ul>
 
